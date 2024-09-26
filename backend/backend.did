@@ -1,0 +1,9 @@
+type Message = 
+ record {
+   content: text;
+   sender: text;
+ };
+service : {
+  getConversationHistory: () -> (vec Message) query;
+  sendMessage: (text) -> (Message);
+}
